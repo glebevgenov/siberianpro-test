@@ -60,8 +60,8 @@ return [
 - Yii won't create the database for you, this has to be done manually before you can access it.
 - Check and edit the other files in the `config/` directory to customize your application as required.
 
-### Migrations
+Load SQL dump:
 
 ~~~
-php yii migrate
+cat data/sql/projects-production-18.11.2016.dump.sql | mysql -u test_siberianpro -pfree -D test_siberianpro
 ~~~

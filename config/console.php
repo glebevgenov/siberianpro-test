@@ -21,6 +21,18 @@ $config = [
             ],
         ],
         'db' => $db,
+        'digestsParser' => [
+            'class' => '\app\components\DigestsParser',
+            'host' => 'imap.yandex.ru',
+            'login' => 'mailparsing@siberian.pro',
+            'password' => 'LftimVjkjlt;m',
+        ],
+        'tmpRedis' => [
+            'class' => 'yii\redis\Connection',
+            'hostname' => 'localhost',
+            'port' => 6379,
+            'database' => 0,
+        ],
     ],
     'params' => $params,
     /*
