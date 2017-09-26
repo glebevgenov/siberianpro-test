@@ -21,8 +21,9 @@ DIRECTORY STRUCTURE
 REQUIREMENTS
 ------------
 
-The minimum requirement by this project that your Web server supports PHP 5.4.0.
-
+PHP 5.4.0+ (with dom, imap, intl extensions)
+MySQL/MariaDB
+Redis
 
 INSTALLATION
 ------------
@@ -64,4 +65,33 @@ Load SQL dump:
 
 ~~~
 cat data/sql/projects-production-18.11.2016.dump.sql | mysql -u test_siberianpro -pfree -D test_siberianpro
+~~~
+
+### Redis
+
+Edit the file `config/console.php`:
+
+```php
+$config = [
+    'components' => [
+        'tmpRedis' => [
+            'class' => 'yii\redis\Connection',
+            'hostname' => 'localhost',
+            'port' => 6379,
+            'database' => 0,
+        ],
+    ],
+];
+```
+
+**NOTES:**
+- a separate Redis database as a temporary storage recommended, because all its data will be lost after cleaning
+
+PARSER
+------
+
+To start a digest parser run:
+
+~~~
+php yii digests/parse
 ~~~
