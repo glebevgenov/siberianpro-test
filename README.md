@@ -21,9 +21,9 @@ DIRECTORY STRUCTURE
 REQUIREMENTS
 ------------
 
-PHP 5.4.0+ (with dom, imap, intl extensions)
-MySQL/MariaDB
-Redis
+- PHP 5.4.0+ (with dom, imap, intl extensions)
+- MySQL/MariaDB
+- Redis
 
 INSTALLATION
 ------------
