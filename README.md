@@ -1,5 +1,5 @@
-Siberian.pro test task
-======================
+Yii2 Mailbox Parser
+===================
 
 DIRECTORY STRUCTURE
 -------------------
